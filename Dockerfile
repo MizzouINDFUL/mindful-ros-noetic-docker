@@ -37,4 +37,5 @@ RUN pip install numpy==1.22 open3d scipy av pyproj
 
 # Set up rosdep
 RUN apt-get install -y python3-catkin-tools python3-osrf-pycommon python3-rosdep
-RUN rosdep init && rosdep update
+RUN rosdep init
+RUN rosdep update --include-eol-distros
