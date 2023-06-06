@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 
 # Set timezone
 ENV TZ=America/Chicago
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ/etc/timezone
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # Install basic dependencies
 RUN apt-get update && apt-get install -y \
